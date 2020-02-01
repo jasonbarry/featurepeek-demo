@@ -1,12 +1,12 @@
 {
   "name": "demo",
   "version": "1.0.0",
-  "main": "deck.mdx",
+  "main": "src/deck.mdx",
   "author": "jasonbarry <jasbarry@me.com>",
   "license": "MIT",
   "scripts": {
-    "build": "mdx-deck build deck.mdx",
-    "start": "mdx-deck deck.mdx"
+    "build": "mdx-deck build src/deck.mdx",
+    "start": "mdx-deck src/deck.mdx"
   },
   "dependencies": {
     "mdx-deck": "^3.0.13"
