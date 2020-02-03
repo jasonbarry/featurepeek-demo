@@ -9,7 +9,10 @@ export default ({ children }) => {
       <div>{children}</div>
       <style global jsx>
         {`
-          #gatsby-focus-wrapper > div > div {
+          body {
+            overflow: auto !important;
+          }
+          #gatsby-focus-wrapper > div > div > div {
             height: initial !important;
           }
         `}

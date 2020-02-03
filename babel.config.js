@@ -3,6 +3,6 @@ module.exports = api => {
   return {
     plugins: [
       "styled-jsx/babel"
-    ]
+    ],
   }
 }

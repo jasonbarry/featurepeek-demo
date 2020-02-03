@@ -25,7 +25,8 @@ export default {
       color: '#9d9d9d',
       fontSize: '50%',
       lineHeight: 1.6,
-      margin: '0.8em',
+      marginTop: '1.5em',
+      marginBottom: '1.5em',
       maxWidth: 640,
     },
     a: {
