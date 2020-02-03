@@ -6,7 +6,7 @@ import previousArrow from './img/previous.svg'
 const containerStyles = {
   alignItems: 'center',
   display: 'flex',
-  height: '100vh',
+  height: 'calc(100vh - 64px)',
   justifyContent: 'center',
   minWidth: '25vw',
 }
@@ -15,6 +15,7 @@ const buttonStyles = {
   background: 'none',
   border: 0,
   cursor: 'pointer',
+  position: 'fixed',
 }
 
 const imageStyles = {

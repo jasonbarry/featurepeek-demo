@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useDeck } from 'mdx-deck'
 
 import Button from './Button'
+import Steps from './Steps'
 
 const variants = {
   visible: { 
@@ -20,28 +21,31 @@ const previous = () => keydown(37)
 const next = () => keydown(39)
 
 export default ({ children }) => {
-  const { step, index, length } = useDeck()
+  const { index, length } = useDeck()
 
   return (
-    <div style={{ display: 'flex' }}>
-      {index > 0 ? <Button direction="previous" onClick={previous} /> : <div style={{ minWidth: '25vw' }} />} 
-      <div>
-        {children.map((child, i) => (
-          <AnimatePresence key={`motion-${i}`}>
-            <motion.div
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              variants={variants}
-              transition={{ type: 'spring', delay: i * 0.08 }}
-            >
-              {child}
-            </motion.div>
-          </AnimatePresence>
-        ))}
+    <>
+      <div style={{ display: 'flex' }}>
+        {index > 0 ? <Button direction="previous" onClick={previous} /> : <div style={{ minWidth: '25vw' }} />} 
+        <div>
+          {children.map((child, i) => (
+            <AnimatePresence key={`motion-${i}`}>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
+                variants={variants}
+                transition={{ type: 'spring', delay: i * 0.08 }}
+              >
+                {child}
+              </motion.div>
+            </AnimatePresence>
+          ))}
+        </div>
+        {index < length - 1 ? <Button direction="next" onClick={next} /> : <div style={{ minWidth: '25vw' }} />}
       </div>
-      {index < length - 1 ? <Button direction="next" onClick={next} /> : <div style={{ minWidth: '25vw' }} />}
-    </div>
+      <Steps currentStep={index + 1} totalSteps={length} />
+    </>
   )
 }
   
