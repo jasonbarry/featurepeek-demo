@@ -7,16 +7,13 @@ export default {
   },
   colors: {
     text: '#333',
-    // background: 'white',
+    background: 'white',
     primary: '#05c5cc',
   },
   styles: {
     Slide: {
       padding: 32,
       overflow: 'auto',
-    },
-    '#gatsby-focus-wrapper': {
-      backgroundColor: 'green',
     },
     h2: {
       fontSize: '75%',
@@ -28,7 +25,11 @@ export default {
       color: '#9d9d9d',
       fontSize: '50%',
       lineHeight: 1.6,
+      margin: '0.8em',
       maxWidth: 640,
+    },
+    a: {
+      textDecoration: 'none',
     }
   },
 }

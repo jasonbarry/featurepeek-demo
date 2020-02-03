@@ -9,6 +9,8 @@
     "start": "mdx-deck src/deck.mdx"
   },
   "dependencies": {
-    "mdx-deck": "^3.0.13"
+    "framer-motion": "^1.8.3",
+    "mdx-deck": "^3.0.13",
+    "styled-jsx": "^3.2.4"
   }
 }
