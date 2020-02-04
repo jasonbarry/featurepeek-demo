@@ -49,7 +49,7 @@ export default ({ children }) => {
           <>
             <Logo />
             <div css={ctaContainer}>
-              <a css={cta} href="https://dashboard.featurepeek.com/login">Create account</a>
+              <a css={cta} href="https://dashboard.featurepeek.com/login" target="_blank">Create account</a>
             </div>
           </>
         }
