@@ -1,9 +1,10 @@
 import React from 'react'
+import { useDeck } from 'mdx-deck'
 import { css } from '@emotion/core'
 
-import logo from './img/logo.svg'
+import Logo from './Logo'
 
-const nav = css`
+const header = css`
   -webkit-backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.8);
   display: flex;
@@ -40,19 +41,19 @@ const cta = css`
 `
 
 export default ({ children }) => {
-
-  // TODO: hacky way to allow scrolling in a slide. 
-  // if anyone has a better way of doing this, I'm all ears. -- @jasonbarry
+  const { index } = useDeck()
   return (
     <>
-      <nav css={nav}>
-        <a href="https://featurepeek.com">
-          <img alt="FeaturePeek logo" height={60} src={logo} width={263} />
-        </a>
-        <div css={ctaContainer}>
-          <a css={cta} href="https://dashboard.featurepeek.com/login">Create account</a>
-        </div>
-      </nav>
+      <header css={header}>
+        {index > 0 &&
+          <>
+            <Logo />
+            <div css={ctaContainer}>
+              <a css={cta} href="https://dashboard.featurepeek.com/login">Create account</a>
+            </div>
+          </>
+        }
+      </header>
       <div>{children}</div>
       <style global jsx>
         {`

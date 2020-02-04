@@ -1,7 +1,13 @@
 import Provider from './Provider'
+import Layout from './Layout'
+import Logo from './Logo'
 
 export default {
   Provider,
+  components: {
+    Layout,
+    Logo,
+  },
   fonts: {
     body: "-apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif",
   },
