@@ -12,7 +12,8 @@ export default {
   },
   styles: {
     Slide: {
-      padding: 32,
+      paddingBottom: 64,
+      paddingTop: 96,
       overflow: 'auto',
     },
     h2: {

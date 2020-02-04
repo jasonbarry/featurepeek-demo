@@ -2,7 +2,8 @@ import React from 'react'
 import { css } from '@emotion/core'
 
 const container = css`
-  background: white;
+  -webkit-backdrop-filter: blur(5px);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 100px;
   bottom: 0;
   line-height: 0;

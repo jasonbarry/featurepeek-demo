@@ -7,7 +7,7 @@ import previousArrow from './img/previous.svg'
 const container = css`
   align-items: center;
   display: flex;
-  height: calc(100vh - 64px);
+  height: calc(100vh - 180px);
   justify-content: center;
   min-width: 25vw;
 `
