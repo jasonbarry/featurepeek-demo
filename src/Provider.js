@@ -30,19 +30,6 @@ export default ({ children }) => {
         }
       </header>
       <div>{children}</div>
-      <style global jsx>
-        {`
-          body {
-            overflow: auto !important;
-          }
-          #gatsby-focus-wrapper > div > div > div {
-            height: initial !important;
-          }
-          .dot {
-            transition: transform 3s ease, background-color 3s ease;
-          }
-        `}
-      </style>
     </>
   )
 }

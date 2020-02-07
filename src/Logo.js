@@ -5,7 +5,7 @@ import logoDemo from './img/logo-demo.svg'
 
 export default ({ demo, width }) => {
   return (
-    <a href="https://featurepeek.com" target="_blank">
+    <a href="https://featurepeek.com" rel="noopener noreferrer" target="_blank">
       <img alt="FeaturePeek logo" src={demo ? logoDemo : logo} width={width || 263} />
     </a>
   )
