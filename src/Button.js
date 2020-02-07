@@ -1,44 +1,34 @@
 import React from 'react'
 import { css } from '@emotion/core'
 
-import nextArrow from './img/next.svg'
-import previousArrow from './img/previous.svg'
-
-const container = css`
+const ctaContainer = css`
   align-items: center;
   display: flex;
-  height: calc(100vh - 180px);
   justify-content: center;
-  min-width: 25vw;
 `
 
-const button = css`
-  background: none;
+const cta = css`
+  background-image: linear-gradient(rgb(5, 197, 204), rgb(19, 183, 209));
   border: 0;
-  cursor: pointer;
-  position: fixed;
+  border-radius: 36px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  color: white;
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-decoration: none;
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s cubic-bezier(0, 0, 1, 2);
 `
 
-const svg = css`
-  opacity: 0.15;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  &:hover {
-    opacity: 0.25;
-    transform: scale(1.1);
-  }
-  &:active {
-    opacity: 0.25;
-    transform: scale(1);
-  }
-`
-
-export default ({ direction, onClick }) => {
-  const arrow = direction === 'previous' ? previousArrow : nextArrow
+export default ({ href, target, children }) => {
   return (
-    <div css={container}>
-      <button css={button} onClick={onClick}>
-        <img alt={direction} css={svg} height={48} src={arrow} width={48} />
-      </button> 
+    <div css={ctaContainer}>
+      <a css={cta} href={href} target={target}>{children}</a>
     </div>
   )
 }

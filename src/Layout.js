@@ -2,7 +2,7 @@ import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useDeck } from 'mdx-deck'
 
-import Button from './Button'
+import Arrow from './Arrow'
 import Steps from './Steps'
 
 const variants = {
@@ -26,7 +26,7 @@ export default ({ children }) => {
   return (
     <>
       <div style={{ display: 'flex' }}>
-        {index > 0 ? <Button direction="previous" onClick={previous} /> : <div style={{ minWidth: '25vw' }} />} 
+        {index > 0 ? <Arrow direction="previous" onClick={previous} /> : <div style={{ minWidth: '25vw' }} />} 
         <div>
           {children.map((child, i) => (
             <AnimatePresence key={`motion-${i}`}>
@@ -42,9 +42,9 @@ export default ({ children }) => {
             </AnimatePresence>
           ))}
         </div>
-        {index < length - 1 ? <Button direction="next" onClick={next} /> : <div style={{ minWidth: '25vw' }} />}
+        {index > 0 && index < length - 1 ? <Arrow direction="next" onClick={next} /> : <div style={{ minWidth: '25vw' }} />}
       </div>
-      <Steps currentStep={index + 1} totalSteps={length} />
+      {index > 0 && <Steps currentStep={index + 1} totalSteps={length} />}
     </>
   )
 }
