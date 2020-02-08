@@ -38,6 +38,9 @@ export default {
       marginBottom: '1.5em',
       maxWidth: 640,
     },
+    strong: {
+      color: '#333',
+    },
     a: {
       textDecoration: 'none',
     }
