@@ -13,7 +13,7 @@ const header = css`
   padding: 16px;
   position: fixed;
   top: 0;
-  width: calc(100% - 48px);
+  width: calc(100% - 32px);
   z-index: 1;
 `
 

@@ -1,4 +1,5 @@
 import Button from './Button'
+import ColorGrid from './ColorGrid'
 import Layout from './Layout'
 import Logo from './Logo'
 import Provider from './Provider'
@@ -7,6 +8,7 @@ export default {
   Provider,
   components: {
     Button,
+    ColorGrid,
     Layout,
     Logo,
   },
