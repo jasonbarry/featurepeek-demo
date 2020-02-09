@@ -1,4 +1,5 @@
 import Button from './Button'
+import ColorGrid from './ColorGrid'
 import Layout from './Layout'
 import Logo from './Logo'
 import Provider from './Provider'
@@ -7,6 +8,7 @@ export default {
   Provider,
   components: {
     Button,
+    ColorGrid,
     Layout,
     Logo,
   },
@@ -37,6 +39,9 @@ export default {
       marginTop: '1.5em',
       marginBottom: '1.5em',
       maxWidth: 640,
+    },
+    strong: {
+      color: '#333',
     },
     a: {
       textDecoration: 'none',

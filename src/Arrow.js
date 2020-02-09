@@ -9,7 +9,8 @@ const container = css`
   display: flex;
   height: calc(100vh - 180px);
   justify-content: center;
-  min-width: 25vw;
+  min-width: 96px;
+  width: calc(50vw - 320px);
 `
 
 const button = css`
