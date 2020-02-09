@@ -1,0 +1,1 @@
+These files use Gatsby's [component shadowing](https://www.gatsbyjs.org/blog/2019-04-29-component-shadowing/) feature to disable mdx-deck's [Presenter Mode](https://github.com/jxnblk/mdx-deck/blob/master/docs/presenting.md), since we're not interested in that for the purposes of the FeaturePeek demo. 
