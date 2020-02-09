@@ -1,8 +1,8 @@
 import React from 'react'
 import { css } from '@emotion/core'
 
-import nextArrow from './img/next.svg'
-import previousArrow from './img/previous.svg'
+import nextArrow from '../img/next.svg'
+import previousArrow from '../img/previous.svg'
 
 const container = css`
   align-items: center;

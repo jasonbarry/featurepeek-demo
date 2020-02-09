@@ -1,15 +1,19 @@
 {
   "name": "demo",
   "version": "1.0.0",
-  "main": "src/deck.mdx",
-  "author": "jasonbarry <jasbarry@me.com>",
+  "main": "decks/welcome.mdx",
+  "author": "jasonbarry <jason@featurepeek.com>",
   "license": "MIT",
   "scripts": {
-    "build": "mdx-deck build src/deck.mdx",
-    "start": "mdx-deck src/deck.mdx"
+    "build": "gatsby build",
+    "clean": "gatsby clean",
+    "start": "gatsby develop"
   },
   "dependencies": {
     "framer-motion": "^1.8.3",
-    "mdx-deck": "^3.1.0"
+    "gatsby": "^2.13.25",
+    "gatsby-theme-mdx-deck": "^3.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   }
 }

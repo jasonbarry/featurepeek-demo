@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDeck } from 'mdx-deck'
+import { useDeck } from 'gatsby-theme-mdx-deck'
 import { css } from '@emotion/core'
 
 import Button from './Button'
