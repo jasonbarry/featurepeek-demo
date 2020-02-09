@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { useDeck } from 'mdx-deck'
+import { useDeck } from 'gatsby-theme-mdx-deck'
 
 import Arrow from './Arrow'
 import Steps from './Steps'

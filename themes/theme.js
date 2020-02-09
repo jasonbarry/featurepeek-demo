@@ -1,8 +1,8 @@
-import Button from './Button'
-import ColorGrid from './ColorGrid'
-import Layout from './Layout'
-import Logo from './Logo'
-import Provider from './Provider'
+import Button from '../components/Button'
+import ColorGrid from '../components/ColorGrid'
+import Layout from '../components/Layout'
+import Logo from '../components/Logo'
+import Provider from '../components/Provider'
 
 export default {
   Provider,

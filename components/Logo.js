@@ -1,7 +1,7 @@
 import React from 'react'
 
-import logo from './img/logo.svg'
-import logoDemo from './img/logo-demo.svg'
+import logo from '../img/logo.svg'
+import logoDemo from '../img/logo-demo.svg'
 
 export default ({ demo, width }) => {
   return (
