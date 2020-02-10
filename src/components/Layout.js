@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useDeck } from 'gatsby-theme-mdx-deck'
 
 import Arrow from './Arrow'
@@ -26,11 +26,12 @@ export default ({ children }) => {
   return (
     <>
       <div style={{ display: 'flex' }}>
-        {index > 0 ? <Arrow direction="previous" onClick={previous} /> : <div style={{ minWidth: '25vw' }} />} 
-        <div>
-          {children.map((child, i) => (
-            <AnimatePresence key={`motion-${i}`}>
+        {index > 0 ? <Arrow direction="previous" onClick={previous} /> : <div className="hide-on-mobile" style={{ minWidth: '25vw' }} />} 
+        <main>
+          <AnimatePresence>
+            {children.map((child, i) => (
               <motion.div
+                key={`motion-${i}`}
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
@@ -39,10 +40,10 @@ export default ({ children }) => {
               >
                 {child}
               </motion.div>
-            </AnimatePresence>
-          ))}
-        </div>
-        {index > 0 && index < length - 1 ? <Arrow direction="next" onClick={next} /> : <div style={{ minWidth: '25vw' }} />}
+            ))}
+          </AnimatePresence>
+        </main>
+        {index > 0 && index < length - 1 ? <Arrow direction="next" onClick={next} /> : <div className="hide-on-mobile" style={{ minWidth: '25vw' }} />}
       </div>
       {index > 0 && <Steps currentStep={index + 1} totalSteps={length} />}
     </>

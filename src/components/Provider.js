@@ -1,9 +1,25 @@
 import React from 'react'
 import { useDeck } from 'gatsby-theme-mdx-deck'
-import { css } from '@emotion/core'
+import { Global, css } from '@emotion/core'
 
 import Button from './Button'
 import Logo from './Logo'
+
+const mediaQueries = css`
+  @media screen and (max-width: 640px) {
+    header .logo {
+      overflow: hidden;
+      width: 64px;
+    }
+    .hide-on-mobile {
+      display: none !important;
+    }
+    main {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+  }
+`
 
 const header = css`
   -webkit-backdrop-filter: blur(5px);
@@ -11,9 +27,10 @@ const header = css`
   display: flex;
   justify-content: space-between;
   padding: 16px;
+  padding-right: 8px;
   position: fixed;
   top: 0;
-  width: calc(100% - 32px);
+  width: calc(100% - 24px);
   z-index: 1;
 `
 
@@ -21,6 +38,7 @@ export default ({ children }) => {
   const { index } = useDeck()
   return (
     <>
+      <Global styles={mediaQueries} />
       <header css={header}>
         {index > 0 &&
           <>

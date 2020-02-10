@@ -7,6 +7,8 @@ const flex = css`
   justify-content: center;
   min-height: 64px;
   min-width: 192px;
+  position: relative;
+  top: -4px;
 `
 
 const container = css`
@@ -41,9 +43,9 @@ const button = css`
   text-decoration: none;
 `
 
-export default ({ href, target, children }) => {
+export default ({ className, href, target, children }) => {
   return (
-    <div css={flex}>
+    <div className={className} css={flex}>
       <div css={container}>
         <a css={button} href={href} target={target}>{children}</a>
       </div>
