@@ -1,4 +1,5 @@
 import React from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { css } from '@emotion/core'
 
 const container = css`
@@ -28,12 +29,36 @@ const backgroundColors = [
   'violet',
 ]
 
+const variants = {
+  visible: { 
+    opacity: 1,
+    scale: 1,
+    y: 0,
+  },
+  hidden: { 
+    opacity: 0,
+    scale: 0.25,
+    y: 25,
+  },
+}
+
 export default () => {
   return (
     <div css={container}>
-      {backgroundColors.map(backgroundColor => (
-        <div css={block} style={{ backgroundColor }} />
-      ))}
+      <AnimatePresence>
+        {backgroundColors.map((backgroundColor, i) => (
+          <motion.div
+            key={`motion-${i}`}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            variants={variants}
+            transition={{ type: 'spring', delay: (i + 2) * 0.08 }}
+          >
+            <div css={block} style={{ backgroundColor }} />
+          </motion.div>
+        ))}
+      </AnimatePresence>
     </div>
   )
 }

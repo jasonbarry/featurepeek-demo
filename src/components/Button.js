@@ -7,6 +7,8 @@ const flex = css`
   justify-content: center;
   min-height: 64px;
   min-width: 192px;
+  position: relative;
+  top: -4px;
 `
 
 const container = css`
