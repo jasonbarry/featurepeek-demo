@@ -43,9 +43,9 @@ const button = css`
   text-decoration: none;
 `
 
-export default ({ className, href, target, children }) => {
+export default ({ href, target, children }) => {
   return (
-    <div className={className} css={flex}>
+    <div css={flex}>
       <div css={container}>
         <a css={button} href={href} target={target}>{children}</a>
       </div>
