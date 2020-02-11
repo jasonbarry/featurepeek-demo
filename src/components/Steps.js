@@ -3,6 +3,7 @@ import { css } from '@emotion/core'
 
 const container = css`
   -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.8);
   bottom: 0;
   line-height: 0;

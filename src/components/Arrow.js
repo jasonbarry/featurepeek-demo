@@ -33,13 +33,13 @@ const svg = css`
   }
 `
 
-export default ({ direction, onClick }) => {
+export default ({ direction, href }) => {
   const arrow = direction === 'previous' ? previousArrow : nextArrow
   return (
     <div css={container} className="hide-on-mobile">
-      <button css={button} onClick={onClick}>
+      <a css={button} href={href}>
         <img alt={direction} css={svg} height={48} src={arrow} width={48} />
-      </button> 
+      </a> 
     </div>
   )
 }

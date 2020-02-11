@@ -6,6 +6,13 @@ import Button from './Button'
 import Logo from './Logo'
 
 const mediaQueries = css`
+  body {
+    overflow: auto !important;
+  }
+  #gatsby-focus-wrapper > div > div > div {
+    height: auto !important;
+  }
+
   @media screen and (max-width: 640px) {
     header .logo {
       overflow: hidden;
@@ -23,6 +30,7 @@ const mediaQueries = css`
 
 const header = css`
   -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: space-between;

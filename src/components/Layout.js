@@ -16,17 +16,13 @@ const variants = {
   },
 }
 
-const keydown = (keyCode) => window.dispatchEvent(new KeyboardEvent('keydown', { keyCode }))
-const previous = () => keydown(37)
-const next = () => keydown(39)
-
 export default ({ children }) => {
   const { index, length } = useDeck()
 
   return (
     <>
       <div style={{ display: 'flex' }}>
-        {index > 0 ? <Arrow direction="previous" onClick={previous} /> : <div className="hide-on-mobile" style={{ minWidth: '25vw' }} />} 
+        {index > 0 ? <Arrow direction="previous" href={`/${index - 1}`} /> : <div className="hide-on-mobile" style={{ minWidth: '25vw' }} />} 
         <main>
           <AnimatePresence>
             {children.map((child, i) => (
@@ -43,7 +39,7 @@ export default ({ children }) => {
             ))}
           </AnimatePresence>
         </main>
-        {index > 0 && index < length - 1 ? <Arrow direction="next" onClick={next} /> : <div className="hide-on-mobile" style={{ minWidth: '25vw' }} />}
+        {index > 0 && index < length - 1 ? <Arrow direction="next" href={`/${index + 1}`} /> : <div className="hide-on-mobile" style={{ minWidth: '25vw' }} />}
       </div>
       {index > 0 && <Steps currentStep={index + 1} totalSteps={length} />}
     </>
