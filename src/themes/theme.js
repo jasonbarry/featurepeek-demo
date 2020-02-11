@@ -2,6 +2,7 @@ import Button from '../components/Button'
 import ColorGrid from '../components/ColorGrid'
 import Layout from '../components/Layout'
 import Logo from '../components/Logo'
+import Metadata from '../components/Metadata'
 import Provider from '../components/Provider'
 
 export default {
@@ -11,6 +12,7 @@ export default {
     ColorGrid,
     Layout,
     Logo,
+    Metadata,
   },
   fonts: {
     body: "-apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif",
