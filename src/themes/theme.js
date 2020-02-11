@@ -1,5 +1,6 @@
 import Button from '../components/Button'
 import ColorGrid from '../components/ColorGrid'
+import Emoji from '../components/Emoji'
 import Layout from '../components/Layout'
 import Logo from '../components/Logo'
 import Metadata from '../components/Metadata'
@@ -10,6 +11,7 @@ export default {
   components: {
     Button,
     ColorGrid,
+    Emoji,
     Layout,
     Logo,
     Metadata,
