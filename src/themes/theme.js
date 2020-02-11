@@ -2,6 +2,7 @@ import Button from '../components/Button'
 import ColorGrid from '../components/ColorGrid'
 import Emoji from '../components/Emoji'
 import Layout from '../components/Layout'
+import LocalStorage from '../components/LocalStorage'
 import Logo from '../components/Logo'
 import Metadata from '../components/Metadata'
 import Provider from '../components/Provider'
@@ -13,6 +14,7 @@ export default {
     ColorGrid,
     Emoji,
     Layout,
+    LocalStorage,
     Logo,
     Metadata,
   },
