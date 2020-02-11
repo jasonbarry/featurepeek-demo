@@ -12,9 +12,9 @@ const container = css`
 `
 
 const emojis = [
-  '📸',
-  '🖼',
-  '🎬',
+  { unicode: '\uD83D\uDCF8', label: 'Camera with flash' },
+  { unicode: '\uD83D\uDDBC', label: 'Picture frame' },
+  { unicode: '\uD83C\uDFAC', label: 'Clapper board' },
 ]
 
 const variants = {
@@ -43,7 +43,7 @@ export default () => {
             variants={variants}
             transition={{ type: 'spring', delay: (i + 2) * 0.08 }}
           >
-            <span>{emoji}</span>
+            <span aria-label={emoji.label}>{emoji.unicode}</span>
           </motion.h1>
         ))}
       </AnimatePresence>
