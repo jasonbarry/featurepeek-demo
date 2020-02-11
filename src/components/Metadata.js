@@ -5,7 +5,7 @@ import { css } from '@emotion/core'
 
 const styles = css`
   background: #f6f8fa;
-  border-radius: 4px;
+  border-radius: 5px;
   font-size: 18px;
   line-height: 2;
   max-width: 100%;
