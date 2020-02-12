@@ -55,7 +55,7 @@ export default () => {
           <span>Hi, </span>
           <strong>{name}</strong>
           <span>! </span>
-          <span css={wave}>👋</span>
+          <span aria-label="Hand waving" css={wave} role="img">👋</span>
         </span>
         :
         <div />

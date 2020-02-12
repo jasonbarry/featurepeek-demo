@@ -1,5 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/core'
+import { navigate } from '@reach/router'
 
 import nextArrow from '../img/next.svg'
 import previousArrow from '../img/previous.svg'
@@ -37,9 +38,9 @@ export default ({ direction, href }) => {
   const arrow = direction === 'previous' ? previousArrow : nextArrow
   return (
     <div css={container} className="hide-on-mobile">
-      <a css={button} href={href}>
+      <button css={button} onClick={() => navigate(href)}>
         <img alt={direction} css={svg} height={48} src={arrow} width={48} />
-      </a> 
+      </button> 
     </div>
   )
 }
