@@ -54,6 +54,15 @@ const header = css`
   z-index: 1;
 `
 
+const emptyStyles = {
+  alignItems: 'center',
+  display: 'flex',
+  height: '95vh',
+  justifyContent: 'center',
+  minWidth: '96px',
+  width: '25vw',
+}
+
 export default ({ children }) => {
   const { index, length } = useDeck()
   return (
@@ -66,9 +75,9 @@ export default ({ children }) => {
         </header>
       }
       <div style={{ display: 'flex' }}>
-        {index > 0 ? <Arrow direction="previous" href={`/${index - 1}`} /> : <div className="hide-on-mobile" style={{ width: '25vw' }} />} 
+        {index > 0 ? <Arrow direction="previous" href={`/${index - 1}`} /> : <div className="hide-on-mobile" style={emptyStyles} />} 
         {children}
-        {index > 0 && index < length - 1 ? <Arrow direction="next" href={`/${index + 1}`} /> : <div className="hide-on-mobile" style={{ width: '25vw' }} />}
+        {index > 0 && index < length - 1 ? <Arrow direction="next" href={`/${index + 1}`} /> : <div className="hide-on-mobile" style={emptyStyles} />}
       </div>
       {index > 0 && <Steps currentStep={index + 1} totalSteps={length} />}
     </>

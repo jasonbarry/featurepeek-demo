@@ -1,4 +1,5 @@
 import React from 'react'
+import { navigate } from '@reach/router'
 import { css } from '@emotion/core'
 
 const container = css`
@@ -24,6 +25,7 @@ export default ({ currentStep, totalSteps }) => {
         const dot = css`
           background-color: ${isActive ? '#05c5cc' : '#d9d9d9'};
           border-radius: 8px;
+          cursor: pointer;
           display: inline-block;
           height: 8px;
           margin-left: 5px;
@@ -41,7 +43,8 @@ export default ({ currentStep, totalSteps }) => {
           <a
             key={`step-${i}`}
             css={dot}
-            href={`/${i}`}
+            href=""
+            onClick={() => navigate(`/${i}`)}
           />
         )
       })}
