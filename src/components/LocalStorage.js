@@ -20,7 +20,7 @@ const input = css`
   box-shadow: rgba(67, 90, 111, 0.298039) 0px 0px 0px 1px inset, rgba(67, 90, 111, 0.137255) 0px 1px 2px 0px inset;
   font-size: 18px;
   line-height: 24px;
-  margin: 16px 32px 16px 0;
+  margin: 16px 32px 16px 6px;
   max-width: 240px;
   padding: 10px;
 `
@@ -49,7 +49,7 @@ export default () => {
 
   return (
     <div css={container}>
-      <input autoComplete="off" css={input} type="search" onChange={e => changeName(e.target.value)} placeholder="Type your name here" value={name} />
+      <input autoComplete="off" css={input} type="search" name="name" onChange={e => changeName(e.target.value)} placeholder="Type your name here" value={name} />
       {name ?
         <span>
           <span>Hi, </span>
