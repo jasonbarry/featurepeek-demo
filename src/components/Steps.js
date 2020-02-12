@@ -3,12 +3,13 @@ import { css } from '@emotion/core'
 
 const container = css`
   -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   background: rgba(255, 255, 255, 0.8);
   bottom: 0;
   line-height: 0;
   position: fixed;
-  padding: 24px;
-  padding-bottom: 32px;
+  padding-bottom: 24px;
+  padding-top: 24px;
   text-align: center;
   width: 100%;
 `

@@ -6,8 +6,7 @@ import myTheme from '../themes/theme'
 
 <center>
 
-In this interactive demo,  
-we'll walk you through some of the benefits and feature set. 
+Welcome! In this interactive demo, you'll learn about the benefits that FeaturePeek has to offer. 
 
 </center>
 <br />
@@ -21,37 +20,58 @@ we'll walk you through some of the benefits and feature set.
 
 ## What is FeaturePeek?
 
-Value props go here.
+FeaturePeek spins up **on-demand staging environments** every time you open a pull request on your frontend repo.
 
-<br /><br />
+Unlike typical staging environments, FeaturePeek's environments are **packed with bonus features** that make it easy for your reviewers to leave great feedback. 
+
+It works with static sites and sites containerized with Docker. And it doesn't matter who your hosting provider is – since FeaturePeek doesn't touch your infrastructure, it works whether you deploy on anything from *AWS to Zeit*.
+
 </Layout>
 
 ---
 
 <Layout>
 
-## Web content
+## Floating widget
 
-These pages in this demo are made of plain ol' static web content: HTML, JavaScript, and CSS. Check out the [live deployment](https://demo.featurepeek.com).
+See the widget in the bottom left? That's added automatically. You don't need to install any dependencies for it to appear – you get it just by deploying to FeaturePeek. 
 
-This is a static project, you can see the source [here](https://github.com/featurepeek/demo) but we support more complex projects like Node.js running in a Docker container. This page contains proposed changes that haven't been merged in yet – compare against the real thing running live in production here. 
+**Go ahead and click on it to open it up.** You'll see useful contextual info like who created the pull request and a description of what changed.
 
-Normally to see changes before they get merged in, you'd have to checkout the changes, install dependencies, and run the code yourself locally. With FeaturePeek, we do that for you, so all you have to do is click a link. 
+This is also where you can **comment** and **create new issues.** Comments are mirrored to the GitHub pull request, and issues are saved to the repo.
 
-<br /><br />
 </Layout>
 
 ---
 
 <Layout>
 
-## Heads-up display
+## Browser context included
 
-See this widget in the bottom left? That's added automatically by FeaturePeek. You don't need to add any runtime dependencies or make any code changes for it to appear – you get it for free just by deploying on FeaturePeek. 
+Whenever someone writes a comment or issue on FeaturePeek, **detailed metadata** about their browsing context is sent along with it. 
 
-Go ahead and open it up – you'll see useful contextual info like who created the pull request, the changes that went into it, and all the actions live here too.
+<Metadata />
 
-<br /><br />
+You'll never have to chase down details like URL or browser version from your reviewers again.
+
+</Layout>
+
+---
+
+<Layout>
+
+## Screenshots and screen recordings
+
+You can take screenshots of elements on the page, and screen recordings of your interactions. They'll be posted inline in the pull request comments and issues on GitHub.
+
+<Emoji />
+
+Normally, you'd have to use a third-party app to record and convert your media to a gif. But with FeaturePeek, you can do it in just a few clicks.
+
+Try opening up the floating widget and creating a new comment. In the *Attach* dropdown, select an option. You won't be able to submit the comment until you create an account, but this should give you an idea about how easy it is to attach screenshots and recordings.
+
+And yes, this **works on mobile too**.
+
 </Layout>
 
 ---
@@ -60,37 +80,30 @@ Go ahead and open it up – you'll see useful contextual info like who created t
 
 ## Deep linking
 
-By the way, notice how when we move from page to page that the URL and document title changes. This lets you easily share the page with your colleagues. Go ahead and refresh this page – you'll arrive right here again.
+By the way – notice how when you navigate from page to page, the URL changes. Even though your web app is being served in a *frame*, its routes are exposed in the window's *location hash*, making it super easy to share.
 
-<br /><br />
+**Go ahead and refresh this page** – you'll arrive right here again. We'll wait for you 😁.
+
+Imagine previewing builds without checking out branches, installing dependencies, or resarting dev servers – but rather by visiting a link instead.
+
 </Layout>
 
 ---
 
 <Layout>
 
-## Leave comments
+## Persistent logins
 
-Now we're going to leave a comment on this pull request, and attach a video of our session, all from within the context of this page, without using third-party tools. How cool is that? 
+Does your web app allow users to log in?
 
-Open up the widget and select "Leave comment". In the Attachment dropdown, select screen recording. Follow the onscreen instructions. 
+Since each FeaturePeek project gets a dedicated subdomain, your *cookies* and *local storage* will persist from one environment to another. 
 
-What's happening is your screen is getting recorded, and it's converting into a gif so that you can post it inline in the GitHub pull request. Normally you'd have to use third-party apps to record and convert your media, but you can do that in just a couple clicks right here on FeaturePeek. 
+This means you will **remain logged in across environments**, saving you from the annoyance of re-authenticating with your web app every time you visit a new build.
 
-(You won't be able to actually submit a comment until you create an account.)
+<LocalStorage />
 
-<br /><br />
-</Layout>
+**Enter your name** in the text input above. When you visit a running environment on <a href="https://github.com/featurepeek/demo/pulls" target="_blank">another pull request in this repo</a>, you'll see your name already be filled in.
 
----
-
-<Layout>
-
-## File issues
-
-You can do the same with filing an issue. Issues are great for keeping track of bugs. We are adding more bug filing integrations soon, so expect to see JIRA, Trello, etc here in the near future.
-
-<br /><br />
 </Layout>
 
 ---
@@ -99,46 +112,13 @@ You can do the same with filing an issue. Issues are great for keeping track of 
 
 ## Measure pixels
 
-Pages loaded in a FeaturePeek environment are supercharged with extra functionality &mdash; all without needing any code changes. 
+Here's a hidden feature.
 
-**Try holding down the Option key** (Alt key on Windows) to bring up the *measurement tool*. Hover over elements on the page to measure their pixel distance away from each other. If you've used Figma or Sketch, you'll feel right at home. 
+**Try holding down the Option key** (Alt key on Windows) to bring up the *measurement tool*. Hover and click while holding down the key to measure from one element to another. 
 
 <ColorGrid />
 
-Again, your website doesn't need to install anything or implement anything to achieve this functionality, and you don't need to install any browser extensions – you get this automatically just by deploying to FeaturePeek. 
-
-<br /><br />
-</Layout>
-
----
-
-<Layout>
-
-## Suggest copy changes
-
-Ever wanted to suggest changes to copy? Try highlighting any text on this page. You'll see a Medium-style tooltip with some quick actions – clicking these quick actions will quote the selected text in either a *comment* on the pull request, or an *issue* on the repository. Try doing one of these now. 
-
-<br /><br />
-</Layout>
-
----
-
-<Layout>
-
-## Log views and errors
-
-Every time an environment gets viewed, or every time an error occurs, we log it. This lets you know that your reviewers are actually running and checking your proposed changes. 
-
-<br /><br />
-</Layout>
-
----
-
-<Layout>
-
-## Will it work with my website? 
-
-Yes.
+Again, you don't need to add any code to your website, or install any browser extensions – you get this automatically just by deploying to FeaturePeek. 
 
 </Layout>
 
@@ -146,13 +126,19 @@ Yes.
 
 <Layout>
 
-## So how does it work? 
+## Record views and errors
 
-First we do this, then we do that.
+Every time an environment gets viewed, FeaturePeek records who viewed it. This lets you know that your reviewers are actually running and checking your proposed changes. 
+
+Similarly, if your reviewer encounters a *JavaScript exception* – an error in the code – it'll be logged and saved for you to fix. 
+
+<TriggerError />
+
+Open up the *Activity pane* in the floating widget, and then **click the button above**. You'll notice that the error from this intentionally faulty example gets captured.
 
 </Layout>
 
---- 
+---
 
 <Layout>
 
@@ -160,11 +146,13 @@ First we do this, then we do that.
 
 That concludes the demo! Thanks for checking it out. 
 
-Want to try something really cool? Why don't you fork this repo and make changes of your own? You'll see your changes deploy on FeaturePeek, supercharged with all the review tools you just learned about. 
+<!-- Why don't you <a href="https://github.com/featurepeek/demo" target="_blank">fork this repo</a> and make changes of your own? You'll see your changes deploy on FeaturePeek, supercharged with all the review tools you just learned about.  -->
 
-Create an account to use with your own projects – all new teams have a two-week free trial. 
+Create a FeaturePeek account to use with your own projects. All new teams have a two-week free trial. 
 
-<br /><br />
+<br />
+<Button href="https://dashboard.featurepeek.com/login" target="_blank">Start your free trial today</Button>
+
 </Layout>
 
 

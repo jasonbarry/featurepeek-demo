@@ -1,16 +1,24 @@
 import Button from '../components/Button'
 import ColorGrid from '../components/ColorGrid'
+import Emoji from '../components/Emoji'
 import Layout from '../components/Layout'
+import LocalStorage from '../components/LocalStorage'
 import Logo from '../components/Logo'
+import Metadata from '../components/Metadata'
 import Provider from '../components/Provider'
+import TriggerError from '../components/TriggerError'
 
 export default {
   Provider,
   components: {
     Button,
     ColorGrid,
+    Emoji,
     Layout,
+    LocalStorage,
     Logo,
+    Metadata,
+    TriggerError,
   },
   fonts: {
     body: "-apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif",
@@ -22,9 +30,11 @@ export default {
   },
   styles: {
     Slide: {
-      paddingBottom: 64,
-      paddingTop: 96,
+      margin: 'auto',
+      maxWidth: 640,
       overflow: 'auto',
+      paddingBottom: 128,
+      paddingTop: 96,
     },
     h2: {
       fontSize: '36px !important',
