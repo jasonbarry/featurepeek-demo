@@ -8,8 +8,8 @@ const container = css`
   bottom: 0;
   line-height: 0;
   position: fixed;
-  padding: 24px;
-  padding-bottom: 32px;
+  padding-bottom: 24px;
+  padding-top: 24px;
   text-align: center;
   width: 100%;
 `

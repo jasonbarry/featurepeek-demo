@@ -30,9 +30,11 @@ export default {
   },
   styles: {
     Slide: {
-      paddingBottom: 64,
-      paddingTop: 96,
+      margin: 'auto',
+      maxWidth: 640,
       overflow: 'auto',
+      paddingBottom: 128,
+      paddingTop: 96,
     },
     h2: {
       fontSize: '36px !important',

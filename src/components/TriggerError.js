@@ -5,7 +5,7 @@ import Button from './Button'
 export default () => {
   const click = (event) => {
     event.preventDefault()
-    throw new Error('Error: Example error for sake of simplicity')
+    throw new Error('Example error for sake of simplicity')
   }
 
   return (

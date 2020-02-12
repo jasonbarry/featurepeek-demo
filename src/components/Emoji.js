@@ -7,6 +7,8 @@ const container = css`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-bottom: -32px;
+  margin-top: -32px;
   max-width: 640px;
   width: 100%;
 `

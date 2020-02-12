@@ -7,10 +7,10 @@ import previousArrow from '../img/previous.svg'
 const container = css`
   align-items: center;
   display: flex;
-  height: calc(100vh - 180px);
+  height: 95vh;
   justify-content: center;
   min-width: 96px;
-  width: calc(50vw - 320px);
+  width: 25vw;
 `
 
 const button = css`

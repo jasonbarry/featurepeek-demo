@@ -2,8 +2,10 @@ import React from 'react'
 import { useDeck } from 'gatsby-theme-mdx-deck'
 import { Global, css } from '@emotion/core'
 
+import Arrow from './Arrow'
 import Button from './Button'
 import Logo from './Logo'
+import Steps from './Steps'
 
 const mediaQueries = css`
   body {
@@ -53,19 +55,22 @@ const header = css`
 `
 
 export default ({ children }) => {
-  const { index } = useDeck()
+  const { index, length } = useDeck()
   return (
     <>
       <Global styles={mediaQueries} />
-      <header css={header}>
-        {index > 0 &&
-          <>
-            <Logo />
-            <Button href="https://dashboard.featurepeek.com/login" target="_blank">Create account</Button>
-          </>
-        }
-      </header>
-      <div>{children}</div>
+      {index > 0 &&
+        <header css={header}>
+          <Logo />
+          <Button href="https://dashboard.featurepeek.com/login" target="_blank">Create account</Button>
+        </header>
+      }
+      <div style={{ display: 'flex' }}>
+        {index > 0 ? <Arrow direction="previous" href={`/${index - 1}`} /> : <div className="hide-on-mobile" style={{ width: '25vw' }} />} 
+        {children}
+        {index > 0 && index < length - 1 ? <Arrow direction="next" href={`/${index + 1}`} /> : <div className="hide-on-mobile" style={{ width: '25vw' }} />}
+      </div>
+      {index > 0 && <Steps currentStep={index + 1} totalSteps={length} />}
     </>
   )
 }
