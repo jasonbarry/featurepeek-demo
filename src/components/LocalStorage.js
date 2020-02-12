@@ -49,7 +49,7 @@ export default () => {
 
   return (
     <div css={container}>
-      <input autocomplete="off" css={input} type="search" onChange={e => changeName(e.target.value)} placeholder="Type your name here" value={name} />
+      <input autoComplete="off" css={input} type="search" onChange={e => changeName(e.target.value)} placeholder="Type your name here" value={name} />
       {name ?
         <span>
           <span>Hi, </span>

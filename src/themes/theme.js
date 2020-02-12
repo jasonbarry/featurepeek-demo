@@ -6,6 +6,7 @@ import LocalStorage from '../components/LocalStorage'
 import Logo from '../components/Logo'
 import Metadata from '../components/Metadata'
 import Provider from '../components/Provider'
+import TriggerError from '../components/TriggerError'
 
 export default {
   Provider,
@@ -17,6 +18,7 @@ export default {
     LocalStorage,
     Logo,
     Metadata,
+    TriggerError,
   },
   fonts: {
     body: "-apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif",

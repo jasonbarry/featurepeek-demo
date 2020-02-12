@@ -11,9 +11,9 @@ const flex = css`
   top: -4px;
 `
 
-const container = css`
+const container = (color = 'teal') => css`
   align-items: center;
-  background-image: linear-gradient(rgb(5, 197, 204), rgb(19, 183, 209));
+  background-image: ${color === 'teal' ? 'linear-gradient(#05c5cc, #13b7d1)' : 'linear-gradient(#f05b53, #bf3223);'};
   border-radius: 36px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   font-size: 18px;
@@ -34,6 +34,7 @@ const container = css`
 
 const button = css`
   color: white;
+  cursor: pointer;
   display: block;
   font-family: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
   padding-top: 14px;
@@ -43,11 +44,11 @@ const button = css`
   text-decoration: none;
 `
 
-export default ({ href, target, children }) => {
+export default ({ color, href, onClick, target, children }) => {
   return (
     <div css={flex}>
-      <div css={container}>
-        <a css={button} href={href} target={target}>{children}</a>
+      <div css={container(color)}>
+        <a css={button} href={href} onClick={onClick} target={target}>{children}</a>
       </div>
     </div>
   )

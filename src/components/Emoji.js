@@ -43,7 +43,7 @@ export default () => {
             variants={variants}
             transition={{ type: 'spring', delay: (i + 2) * 0.08 }}
           >
-            <span aria-label={emoji.label}>{emoji.unicode}</span>
+            <span aria-label={emoji.label} role="img">{emoji.unicode}</span>
           </motion.h1>
         ))}
       </AnimatePresence>
