@@ -5,7 +5,7 @@ module.exports = {
       options: {
         // source directory
         contentPath: 'src/decks',
-        basePath: '../slide',
+        basePath: 'slide',
       }
     }
   ]
