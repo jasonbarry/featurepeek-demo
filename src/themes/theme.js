@@ -26,8 +26,8 @@ export default {
     body: "-apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif",
   },
   colors: {
-    text: '#333',
-    background: 'white',
+    text: '#f0f0f0',
+    background: '#333',
     primary: '#05c5cc',
   },
   styles: {

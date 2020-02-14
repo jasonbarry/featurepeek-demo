@@ -9,7 +9,9 @@ import Steps from './Steps'
 
 const mediaQueries = css`
   body {
+    background: #333;
     overflow: auto !important;
+    color: #f0f0f0;
   }
   #gatsby-focus-wrapper > div > div > div {
     height: auto !important;
@@ -43,7 +45,7 @@ const mediaQueries = css`
 const header = css`
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: space-between;
   padding: 16px;
