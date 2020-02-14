@@ -6,6 +6,7 @@ import LocalStorage from '../components/LocalStorage'
 import Logo from '../components/Logo'
 import Metadata from '../components/Metadata'
 import Provider from '../components/Provider'
+import StartButton from '../components/StartButton'
 import TriggerError from '../components/TriggerError'
 
 export default {
@@ -18,6 +19,7 @@ export default {
     LocalStorage,
     Logo,
     Metadata,
+    StartButton,
     TriggerError,
   },
   fonts: {
