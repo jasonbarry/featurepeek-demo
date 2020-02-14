@@ -20,7 +20,7 @@ const demoLogo = (
     src={logoDemo}
     height="400"
     width="2164"
-    css={css`width: 100%;`}
+    css={css`width: 100%; height: auto;`}
   />
 )
 
