@@ -12,10 +12,22 @@ const styles = css`
   cursor: pointer;
 `
 
-export default ({ demo, width }) => {
+const fpLogo = <img alt="FeaturePeek Logo" src={logo} width="263" />
+
+const demoLogo = (
+  <img
+    alt="FeaturePeek Demo Logo"
+    src={logoDemo}
+    height="400"
+    width="2164"
+    css={css`width: 100%;`}
+  />
+)
+
+export default ({ demo }) => {
   return (
     <button className="logo" css={styles} onClick={() => navigate(demo ? '/1' : '/0')}>
-      <img alt="FeaturePeek logo" src={demo ? logoDemo : logo} width={width || 263} />
+      {demo ? demoLogo : fpLogo}
     </button>
   )
 }
