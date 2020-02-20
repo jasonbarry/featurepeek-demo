@@ -14,6 +14,23 @@ const mediaQueries = css`
   #gatsby-focus-wrapper > div > div > div {
     height: auto !important;
   }
+  a {
+    &::after {
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 3px;
+      content: ' ';
+      display: block;
+      height: 3px;
+      position: absolute;
+      bottom: -1px;
+      transform: scale(0);
+      transition: all 0.15s ease;
+      width: 100%;
+    }
+    &:hover::after {
+      transform: scale(1);
+    }
+  }
 
   @keyframes wave-animation {
       0% { transform: rotate(  0.0deg) }
