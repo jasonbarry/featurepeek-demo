@@ -14,7 +14,7 @@ const mediaQueries = css`
   #gatsby-focus-wrapper > div > div > div {
     height: auto !important;
   }
-  a {
+  p a {
     &::after {
       background: rgba(0, 0, 0, 0.1);
       border-radius: 3px;
