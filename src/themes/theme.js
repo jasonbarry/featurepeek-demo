@@ -56,6 +56,8 @@ export default {
       color: '#333',
     },
     a: {
+      display: 'inline-block',
+      position: 'relative',
       textDecoration: 'none',
     }
   },
