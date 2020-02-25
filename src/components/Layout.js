@@ -1,4 +1,5 @@
 import React from 'react'
+import { useDeck } from 'gatsby-theme-mdx-deck'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const variants = {
@@ -13,6 +14,7 @@ const variants = {
 }
 
 export default ({ children }) => {
+  const { index } = useDeck()
   return (
     <main>
       <AnimatePresence>
@@ -29,6 +31,15 @@ export default ({ children }) => {
           </motion.div>
         ))}
       </AnimatePresence>
+      {index > 0 &&
+        <div className="mobile-only" style={{ color: '#bfbfbf', fontSize: 28, marginTop: 96, textAlign: 'center' }}>
+          <p>
+            <span>{'\u2190'}&nbsp;&nbsp;</span>
+            <em>Swipe</em>
+            <span>&nbsp;&nbsp;{'\u2192'}</span>
+          </p>
+        </div>
+      }
     </main>
   )
 }

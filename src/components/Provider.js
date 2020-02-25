@@ -14,6 +14,9 @@ const mediaQueries = css`
   #gatsby-focus-wrapper > div > div > div {
     height: auto !important;
   }
+  .mobile-only {
+    display: none;
+  }
   p a {
     &::after {
       background: rgba(0, 0, 0, 0.1);
@@ -49,6 +52,9 @@ const mediaQueries = css`
     }
     .hide-on-mobile {
       display: none !important;
+    }
+    .mobile-only {
+      display: block !important;
     }
     main {
       margin-left: 24px;
