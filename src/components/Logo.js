@@ -2,8 +2,7 @@ import React from 'react'
 import { navigate } from '@reach/router'
 import { css } from '@emotion/core'
 
-import logo from '../img/logo.svg'
-import logoDemo from '../img/logo-demo.svg'
+import fullLogo from '../img/full-logo.svg'
 
 const styles = css`
   -webkit-appearance: none;
@@ -15,7 +14,7 @@ const styles = css`
 export default ({ demo, width }) => {
   return (
     <button className="logo" css={styles} onClick={() => navigate(demo ? '/1' : '/0')}>
-      <img alt="FeaturePeek logo" src={demo ? logoDemo : logo} width={width || 263} />
+      <img alt="FeaturePeek logo" src={fullLogo} width={width || 263} />
     </button>
   )
 }
