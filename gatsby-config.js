@@ -6,6 +6,14 @@ module.exports = {
         // source directory
         contentPath: 'src/decks',
       }
-    }
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /full-logo/,
+        }
+      }
+    },
   ]
 }
