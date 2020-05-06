@@ -20,9 +20,9 @@ Welcome! In this interactive demo, you'll learn about the benefits that FeatureP
 
 ## What is FeaturePeek?
 
-FeaturePeek spins up **on-demand staging environments** every time you open a pull request on your frontend repo.
+FeaturePeek spins up **on-demand deployment previews** every time you open a pull request on your frontend repo.
 
-Unlike typical staging environments, FeaturePeek's environments are **packed with bonus features** that make it easy for your reviewers to leave great feedback. 
+Unlike typical deployment previews, FeaturePeek's deployments are **packed with bonus features** that make it easy for your reviewers to leave great feedback. 
 
 It works with static sites and sites containerized with Docker. And it doesn't matter who your hosting provider is – since FeaturePeek doesn't touch your infrastructure, it works whether you deploy on anything from *AWS* to *Zeit*.
 
@@ -36,9 +36,9 @@ It works with static sites and sites containerized with Docker. And it doesn't m
 
 See the widget in the bottom left? That's added automatically. You don't need to install any dependencies for it to appear – you get it just by deploying to FeaturePeek. 
 
-**Go ahead and click on it to open it up.** You'll see useful contextual info like who created the pull request and a description of what changed.
+**Go ahead and click on it to open it up.** You'll see useful contextual info like who created the pull request, a description of what changed, who on your team has viewed the changes, and more.
 
-This is also where you can **comment** and **create new issues.** Comments are mirrored to the GitHub pull request, and issues are saved to the repo.
+This is also where you can **comment** and **create new issues.** Comments are mirrored to the GitHub pull request, and issues are saved to the repo. You can create tickets on third-party integrations here, too.
 
 </Layout>
 
@@ -68,9 +68,7 @@ You can take screenshots of elements on the page, and screen recordings of your 
 
 Normally, you'd have to use a third-party app to record and convert your media to a gif. But with FeaturePeek, you can do it in just a few clicks.
 
-Try opening up the floating widget and creating a new comment. In the *Attach* dropdown, select an option. You won't be able to submit the comment until you create an account, but this should give you an idea about how easy it is to attach screenshots and recordings.
-
-And yes, this **works on mobile too**.
+**Try clicking the *Take screenshot* or *Record screen* buttons** here in the bottom left. You won't be able to submit the content until you create an account, but it should give you an idea about how easy it is to attach screenshots and recordings to your review comments.
 
 </Layout>
 
@@ -84,7 +82,7 @@ By the way – notice how when you navigate from page to page, the URL changes. 
 
 **Go ahead and refresh this page** – you'll arrive right here again. We'll wait for you 😁.
 
-Imagine previewing builds without checking out branches, installing dependencies, or resarting dev servers – but rather by visiting a link instead.
+Imagine reviewing builds without checking out branches, installing dependencies, or resarting dev servers – but rather by visiting a link instead.
 
 </Layout>
 
@@ -96,13 +94,13 @@ Imagine previewing builds without checking out branches, installing dependencies
 
 Does your web app allow users to log in?
 
-Since each FeaturePeek project gets a dedicated subdomain, your *cookies* and *local storage* will persist from one environment to another. 
+Since each FeaturePeek project gets a dedicated subdomain, your *cookies* and *local storage* will persist from one deployment to another. 
 
-This means you will **remain logged in across environments**, saving you from the annoyance of re-authenticating with your web app every time you visit a new build.
+This means you will **remain logged in across deployments**, saving you from the annoyance of re-authenticating with your web app every time you visit a new build.
 
 <LocalStorage />
 
-**Enter your name** in the text input above. When you visit a running environment of <a href="https://dashboard.featurepeek.com/peek/ppnh5v1#/6" target="_blank">a different pull request in this repo</a>, you'll see your name already be filled in.
+**Enter your name** in the text input above. When you visit a running deployment of <a href="https://dashboard.featurepeek.com/peek/ppnh5v1#/6" target="_blank">a different pull request in this repo</a>, you'll see your name already filled in.
 
 </Layout>
 
@@ -112,29 +110,13 @@ This means you will **remain logged in across environments**, saving you from th
 
 ## Measure pixels
 
-Here's a hidden feature.
+Here's a fun feature.
 
-**Try holding down the Option key** (Alt key on Windows) to bring up the *measurement tool*. Hover and click while holding down the key to measure from one element to another. 
+**Click the *Measure* button** to bring up the *measurement tool*. Hover and click any element on the page to measure from one element to another. 
 
 <ColorGrid />
 
 Again, you don't need to add any code to your website, or install any browser extensions – you get this automatically just by deploying to FeaturePeek. 
-
-</Layout>
-
----
-
-<Layout>
-
-## Record views and errors
-
-Every time an environment gets viewed, FeaturePeek records who viewed it. This lets you know that your reviewers are actually running and checking your proposed changes. 
-
-Similarly, if your reviewer encounters a *JavaScript exception* – an error in the code – it'll be logged and saved for you to fix. 
-
-<TriggerError />
-
-Open up the *Activity pane* in the floating widget, and then **click the button above**. You'll notice that the error from this intentionally faulty example gets captured.
 
 </Layout>
 
@@ -148,7 +130,7 @@ That concludes the demo! Thanks for checking it out.
 
 <!-- Why don't you <a href="https://github.com/featurepeek/demo" target="_blank">fork this repo</a> and make changes of your own? You'll see your changes deploy on FeaturePeek, supercharged with all the review tools you just learned about.  -->
 
-Create a FeaturePeek account to use with your own projects. All new teams have a two-week free trial. 
+**Create a FeaturePeek account** to use with your own projects. All new teams start with a two-week free trial. 
 
 <br />
 <Button href="https://dashboard.featurepeek.com/login" target="_blank">Start your free trial today</Button>
