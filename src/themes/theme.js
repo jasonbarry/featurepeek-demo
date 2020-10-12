@@ -26,7 +26,7 @@ export default {
     body: "-apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif",
   },
   colors: {
-    text: '#333',
+    text: '#323232',
     background: 'white',
     primary: '#05c5cc',
   },
@@ -53,7 +53,7 @@ export default {
       maxWidth: 640,
     },
     strong: {
-      color: '#333',
+      color: '#323232',
     },
     a: {
       display: 'inline-block',
